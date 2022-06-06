@@ -1,0 +1,206 @@
+/*general rules reset*/
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*rules img*/
+img,
+svg,
+picture {
+  width: 100%;
+  display: block;
+}
+
+
+/*all styles rules*/
+:root{
+    
+    --bg-card: hsl(0, 0%, 100%);
+    --pale-blue:hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --hover:hsl(245, 75%, 61%);
+
+    --very-pale-blue:hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --ff-Red-Hat: 'Red Hat Display', sans-serif;
+    
+    --fw-mdm: 500;
+    --fw-bld: 700;
+    --fw-black: 900;
+
+    --fs-default: 1rem;
+    --fs-title: 1.5rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem
+}
+
+body{
+  font-family: var(--ff-Red-Hat);
+  min-height: 100vh;
+  background: url("imgs/pattern-background-mobile.svg") no-repeat top;
+  background-size: contain;
+  background-color: var(--pale-blue);
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*main component*/
+.order-component{
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: min(90%, 24em);
+  border-radius: 1rem;
+  box-shadow: 0em 1em 3em hsla(245, 75%, 52%, 0.2);
+}
+
+.section-image img{
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.section-text{
+  margin: 2rem;
+}
+
+.text-content{
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+.text-content .title{
+  font-size: var(--fs-title);
+  font-weight: var(--fw-black);
+  color: var(--dark-blue);
+}
+
+.text-content p{
+  font-size: var(--fs-default);
+  color: var(--desaturated-blue);
+  line-height: 1.5;
+  margin-block-start: 1rem;
+  font-weight: var(--fw-mdm);
+}
+
+.summary-recap{
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  background-color: var(--very-pale-blue);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-block: 1.5rem;
+  font-size: var(--fs-medium);
+}
+
+
+
+.icon-music img{
+  width: 3rem;
+}
+
+.info-summary{
+  margin-left: 1rem;
+}
+
+.info-summary h4{
+  color: var(--dark-blue);
+  font-weight: var(--fw-black);
+  font-size: var(--fs-medium);
+}
+
+.info-summary p{
+  color: var(--desaturated-blue);
+  font-weight: var(--fw-mdm);
+  margin-block-start: 0.2rem;
+}
+
+
+
+.change-order{
+  margin-left: auto;
+}
+
+.change-order a{
+  color: var(--bright-blue);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-bld);
+  transition: all 0.5s;
+}
+
+.change-order a:hover{
+  text-decoration: none;
+  color: var(--hover);
+}
+
+
+
+
+.cta-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-group button{
+  font-size: var(--fs-medium);
+  padding-block: 1rem;
+  border-radius: 0.8em;
+  border: none;
+  cursor: pointer;
+  font-weight: var(--fw-bld);
+}
+
+.cta-confirm{
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  transition: all 0.5s;
+  box-shadow: 0em 1em 2em hsla(245, 75%, 52%, 0.3);
+}
+
+.cta-confirm:hover{
+  background-color: var(--hover);
+  box-shadow: 0em 1em 2em hsla(245, 75%, 61%, 0.5);
+}
+
+.cta-cancel{
+  background: none;
+  margin-block-start: 0.7rem;
+  color: var(--desaturated-blue);
+  transition: all 0.5s;
+  
+}
+
+.cta-cancel:hover{
+  color: var(--dark-blue);
+}
+
+
+/*rules for desktop size*/
+@media screen and (min-width: 62em) {
+  body{
+    background: url("imgs/pattern-background-desktop.svg") no-repeat top;
+    background-size: contain;
+    background-color: var(--pale-blue);
+  }
+  .section-text{
+    margin-inline: 3rem;
+  }
+}
+
+.attribution {
+  font-size:  0.6875rem;
+  margin-top: 2.5rem;
+}
